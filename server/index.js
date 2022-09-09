@@ -5,6 +5,7 @@ const {generateFile} = require('./controllers/generateFile');
 const { executePy } = require('./controllers/executePy');
 const { executeJs } = require('./controllers/executeJs');
 const app = express();
+const port = process.env.PORT || 5000;
 
 
 app.use(cors());
@@ -47,6 +48,6 @@ app.post('/run', async (request, response)=>{
 }
 });
 
-app.listen(5000, ()=>{
-    console.log("Listening on port 5000");
+app.listen(port, ()=>{
+    console.log(`Listening on port ${5000}`);
 });
